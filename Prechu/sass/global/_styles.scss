@@ -1,0 +1,19 @@
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section{
+	@include box;
+	@include segoe;
+}
+.layout {
+	@include box;
+	width:1250px;
+	margin:0 auto;
+	padding: 0 112px;
+	@media (max-width: 640px) {
+		width: 640px;
+		padding: 0 25px;
+	}
+}

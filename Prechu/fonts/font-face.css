@@ -1,0 +1,30 @@
+/* Example */
+/* @font-face {
+    font-family: 'Corbel';
+    src: url('../fonts/Corbel.eot');
+    src: url('../fonts/Corbel.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Corbel.woff') format('woff'),
+         url('../fonts/Corbel.ttf') format('truetype'),
+         url('../fonts/Corbel.svg#Corbel') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Segoe WP N';
+    src: url('../fonts/SegoeWPN/SegoeWPN.eot');
+    src: url('../fonts/SegoeWPN/SegoeWPN.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SegoeWPN/SegoeWPN.woff') format('woff'),
+        url('../fonts/SegoeWPN/SegoeWPN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe WP';
+    src: url('../fonts/Segoe-WP-Light/SegoeWP-Light.eot');
+    src: url('../fonts/Segoe-WP-Light/SegoeWP-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Segoe-WP-Light/SegoeWP-Light.woff') format('woff'),
+        url('../fonts/Segoe-WP-Light/SegoeWP-Light.svg#SegoeWP-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}

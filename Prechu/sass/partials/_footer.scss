@@ -1,0 +1,19 @@
+footer {
+	@include box;
+	display: flex;
+  	position: relative;
+	justify-content: center;
+	padding: 35px 0 50px 0;
+	border-top: 1px solid rgb(226, 226, 226);
+	p{
+		position: relative;
+		height: auto;
+		width: auto;
+		font-family: 'Segoe WP';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		color: #6c6c6c;
+	}
+
+}
