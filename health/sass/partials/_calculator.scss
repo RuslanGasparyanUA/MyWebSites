@@ -1,0 +1,228 @@
+section.calculator {
+	@include box;
+	@include generaltext;
+	height: 675px;
+	.layout{
+		height: 100%;
+		background: url(../img/calculator-background-img.png) center;
+		background-size: cover;
+		padding: 25px 0 30px 0;
+		.calculator-container{
+			display: flex;
+			width: 1175px;
+			margin: 0 auto;
+			@media (max-width: 1279px) {
+				width: 100%;
+				padding: 0 1%;
+			}
+			@media (max-width: 767px) {
+				display: block;
+			}
+			.calculator-form{
+				margin-right: 125px;
+				@media (max-width: 1279px) {
+					margin-right: 25px;
+					text-align: center;
+				}
+				@media (max-width: 767px) {
+					margin-right: 0;
+					margin-bottom: 100px;
+					margin-top: 75px;
+				}
+				.form-head{
+					margin-bottom: 25px;
+					h3{
+						@include h2green;
+						margin-bottom: 5px;
+					}
+					p{
+						@include generaltext;
+						@media (max-width: 767px) {
+							margin-bottom: 50px;
+						}
+					}
+					.button{
+						display: none;
+						@media (max-width: 767px) {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							cursor: pointer;
+							width: 180px;
+							height: 50px;
+							border: none;
+							border-radius: 5px;
+							user-select: none;
+							background: #4684D7;
+							margin: 0 auto;
+							margin-top: 50px;
+							p{
+								margin-bottom: 0;
+								@include whiteButtonText;
+							}
+						}
+					}
+				}
+				form{
+					@media (max-width: 767px) {
+						display: none;
+					}
+					fieldset{
+						.form-group{
+							margin-bottom: 25px;
+							@media (min-width: 768px) and (max-width: 1023px) {
+								&:nth-of-type(2){
+									.form-item:nth-of-type(2){
+										font-size: 17px;
+									}
+								}
+							}
+							&:nth-of-type(4){
+								margin-bottom: 60px;
+								@media (min-width: 768px) and (max-width: 1023px) {
+									margin-bottom: 25px;
+								}
+							}
+							p{
+								margin-bottom: 5px;
+							}
+							.form-item {
+								display: inline-block;
+								margin-right: 20px;
+								@media (max-width: 1279px) {
+									margin-right: 5px;
+								}
+								&:last-child{
+									margin-right: 0;
+								}
+							}
+							.form-item input[type=radio] {
+								display: none;
+							}
+							.form-item label {
+								display: inline-block;
+								cursor: pointer;
+								width: 180px;
+								height: 50px;
+								padding-top: 10px;
+								text-align: center;
+								border: none;
+								border-radius: 5px;
+								user-select: none;
+								background: #FFFFFF;
+								@media (min-width: 768px) and (max-width: 1023px) {
+									width: 120px;
+								}
+							}
+							.form-item input[type=radio]:checked + label {
+								background: #4684D7;
+								color: #FFFFFF;
+							}
+							.form-item label:hover {
+								background: #ffffed;
+							}
+						}
+						.output{
+							display: flex;
+							width: 100%;
+							justify-content: space-between;
+							align-items: center;
+							input{
+								display: inline-block;
+								width: 180px;
+								height: 50px;
+								text-align: center;
+								border: none;
+								border-radius: 5px;
+								user-select: none;
+								background: #4684D7;
+								@include whiteButtonText;
+								@media (min-width: 768px) and (max-width: 1023px) {
+									width: 120px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.registration-form{
+				@media (max-width: 1279px) {
+					text-align: center;
+					margin: 0 auto;
+					width: 225px;
+				}
+				.form-head{
+					margin-bottom: 25px;
+					h3{
+						@include h2green;
+						margin-bottom: 5px;
+					}
+					.button{
+						display: none;
+						@media (max-width: 767px) {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							cursor: pointer;
+							width: 180px;
+							height: 50px;
+							border: none;
+							border-radius: 5px;
+							user-select: none;
+							background: #4684D7;
+							@include whiteButtonText;
+							margin: 0 auto;
+							margin-top: 50px;
+							p{
+								line-height: 100%;
+							}
+						}
+					}
+				}
+				form{
+					width: 450px;
+					@media (max-width: 1279px) {
+						width: 100%;
+					}
+					@media (max-width: 767px) {
+						display: none;
+					}
+					fieldset{
+						width: 100%;
+						.area{
+							margin-bottom: 25px;
+							width: 100%;
+							&:last-of-type{
+								margin-bottom: 55px;
+							}
+							label{
+								margin-bottom: 5px;
+							}
+							input{
+								display: block;
+								padding: 10px 25px;
+								width: 100%;
+								height: 50px;
+								background: #FFFFFF;
+								border: none;
+								box-shadow: 0px 1px 10px rgba(81, 81, 81, 0.2);
+								border-radius: 5px;
+								@include generaltext;
+								&::placeholder{
+									opacity: .3;
+								}
+							}
+						}
+						input:nth-child(4){
+							float: right;
+							border: none;
+							text-align: center;
+							@include greenButton;
+							@include whiteButtonText;
+						}
+					}
+				}
+			}
+		}
+	}
+}

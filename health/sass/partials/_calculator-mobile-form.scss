@@ -1,0 +1,72 @@
+.calculator-mobile-form{
+	width: 100%;
+  	height: 100vh;
+  	background: rgba(177, 177, 177, 0.8);
+  	backdrop-filter: blur(20px);
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 100;
+  	display: none;
+	padding-top: 20px;
+	text-align: center;
+	@include generaltext;
+	.close-button{
+		width: 70px;
+		height: 5px;
+		background: #34BF81;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 30px;
+		right: 40%;
+	}
+	.form-head{
+		margin-bottom: 25px;
+		h3{
+			@include h2green;
+			margin-bottom: 5px;
+		}
+		p{
+			@include generaltext;
+		}
+	}
+	form{
+		width: 100%;
+		fieldset{
+			width: 100%;
+			.form-group{
+				margin-bottom: 25px;
+				p{
+					margin-bottom: 10px;
+				}
+				select{
+					width: 180px;
+					height: 50px;
+					border: none;
+					border-radius: 5px;
+					background: #FFFFFF;
+					@include generaltext;
+					padding-left: 10px;
+				}
+			}
+			.output{
+				width: 100%;
+				p{
+					margin-bottom: 25px;
+				}
+				input{
+					display: inline-block;
+					cursor: pointer;
+					width: 180px;
+					height: 50px;
+					text-align: center;
+					border: none;
+					border-radius: 5px;
+					user-select: none;
+					background: #4684D7;
+					@include whiteButtonText;
+				}
+			}
+		}
+	}
+}
