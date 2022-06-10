@@ -1,0 +1,20 @@
+html, body{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+ul{
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+ul li h2{
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}

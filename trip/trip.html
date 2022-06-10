@@ -1,0 +1,250 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1" />
+	<link rel="stylesheet" href="css/all.css" type="text/css" />
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<title>Trip</title>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="back">
+			<a href="../index.html" id="back">На главную</a>
+		</div>
+		<header class="header">
+			<div class="layout">
+				<div class="logo">
+					<a href="#">
+						<img src="img/header_logo.png" alt="main logo trip & mind">
+					</a>
+					<h1>Trip and Mind</h1>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#alltour">Все туры</a>
+						</li>
+						<li>
+							<a href="#testimonials">Отзывы</a>
+						</li>
+						<li>
+							<a href="#contacts">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="burger_menu" onclick="myFunction(this)">
+					<span class="line1"></span>
+					<span class="line2"></span>
+					<span class="line3"></span>
+				</div>
+				<div class="opened-menu" id="opened-menu">
+					<div class="close-button">
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+					<ul>
+						<li><p>Туры по Европе</p></li>
+						<li><p>Туры по Америке</p></li>
+						<li><p>Туры по Канаде</p></li>
+						<li><p>Туры по Египту</p></li>
+						<li><p>Туры по Турции</p></li>
+						<li><p>Туры по Китаю</p></li>
+					</ul>
+				</div>
+				<div class="button_return">
+					<a href="#wrapper">top</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="content">
+				<section class="ireland">
+					<div class="layout">
+						<div class="ireland_content">
+							<h3 class="ireland_title">Открой для себя Новую Ирландию</h3>
+							<p class="ireland_paragraf">Авторские туры по экзотическим уголкам от Ивана Иванова</p>
+							<div class="ireland_buttons">
+								<button>Оставить заявку</button>
+								<div class="ireland_case">
+									<a href="#/">
+										<img src="img/icon_player.png" alt="player icon">
+										<p>Посмотрите<br> видео-отчет<br> 2018-2019</p>
+									</a>
+								</div>
+							</div>
+							<div class="ireland_socials">
+								<h5 class="social_title">Подписывайтесь в соцсетях</h5>
+								<div class="social_icons">
+									<a href="#/"><img src="img/icon_white-yt.png" alt="icon youtube"></a>
+									<a href="#/"><img src="img/icon_white-fb.png" alt="icon facebook"></a>
+									<a href="#/"><img src="img/icon_white-tw.png" alt="icon twitter"></a>
+									<a href="#/"><img src="img/icon_white-vk.png" alt="icon vk"></a>
+								</div>
+							</div>
+						</div>
+						<div class="cards">
+							<ul>
+								<li>
+									<div class="card">
+										<img src="img/imgIsland1.png" alt="Waterdowns of Iseland" class="card_img">
+										<h4>02</h4>
+										<p>Водопады <br>Исландии</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+								<li>
+									<div class="card">
+										<img src="img/imgIsland2.png" alt="Wonderful Dolomits" class="card_img">
+										<h4>03</h4>
+										<p>Сказочные <br>Доломиты</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+								<li>
+									<div class="card">
+										<img src="img/imgIsland3.png" alt="Unbelieveble Norway" class="card_img">
+										<h4>04</h4>
+										<p>Неизведанная <br>Норвегия</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="cards-mobile">
+							<ul class="slider">
+								<li>
+									<div class="card">
+										<img src="img/imgIsland1.png" alt="Waterdowns of Iseland" class="card_img">
+										<h4>02</h4>
+										<p>Водопады <br>Исландии</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+								<li>
+									<div class="card">
+										<img src="img/imgIsland2.png" alt="Wonderful Dolomits" class="card_img">
+										<h4>03</h4>
+										<p>Сказочные <br>Доломиты</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+								<li>
+									<div class="card">
+										<img src="img/imgIsland3.png" alt="Unbelieveble Norway" class="card_img">
+										<h4>04</h4>
+										<p>Неизведанная <br>Норвегия</p>
+										<img src="img/icon_smallArrow.png" alt="small right-arrow" class="card_arrow">
+									</div>
+								</li>
+							</ul>
+							<div class="arrow-buttons">
+								<img src="img/icon_arrow-left.png" alt="icon_arrow-left" class="arrow_left">
+								<img src="img/icon_arrow-right.png" alt="icon_arrow-right" class="arrow_right">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="all_tours" id="alltour">
+					<div class="layout">
+						<div class="tour_info">
+							<div class="tour_card">
+								<img src="img/imgHawaii1.png" alt="Hawaii" class="tour_card-img">
+								<h4 class="data">10-24</h4>
+								<p class="month">апреля</p>
+								<p class="place">Большое ущелье на острове Гавайи</p>
+								<img src="img/icon_bigArrow.png" alt="icon big arrow right" class="tour_arrow">
+							</div>
+							<div class="tour_vectors">
+								<h3 class="tour_title">Посмотрите все направления туров</h3>
+								<p class="tour_paragraf">Берега океанов и дикие пляжи с редкими породами
+									деревьев. Местная архитектура и первозданный вид дикой природы
+								</p>
+								<button>Смотреть все</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="consultations">
+					<div class="layout">
+						<div class="consult_container">
+							<div class="text_info">
+								<h3>Оставьте заявку на бесплатную консультацию</h3>
+								<p>Мы перезвоним вам в ближайшее время</p>
+							</div>
+							<div class="request_form">
+								<form>
+									<fieldset>
+										<input type="text" placeholder="Ваше имя" class="input">
+										<input type="text" placeholder="Введите ваш номер" value="+380" class="input">
+										<button>Отправить заявку</button>
+										<p class="form_paragraf">Нажимая кнопку, Вы даёте согласие на <span
+												class="orange_text">обработку персональных данных</span></p>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="testimonials" id="testimonials">
+					<div class="layout">
+						<div class="test_info">
+							<div class="test_requests">
+								<h3>Что пишут участники наших путешествий</h3>
+								<p>87% участников приходят по личной рекомендации от
+									друзей. А каждый 4-ый путешествует с нами больше двух раз!
+								</p>
+								<button>Читать отзывы</button>
+							</div>
+							<div class="test_card">
+								<img src="img/imgHawaii2.png" alt="Hawaii" class="test_card-img">
+								<h4>Отзыв</h4>
+								<p class="name">Елена Иванова</p>
+								<p class="words">Пожалуй, это был самый лучший отпуск в моей жизни…</p>
+								<img src="img/icon_bigArrow.png" alt="icon big arrow right" class="test_arrow">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<section class="footer" id="contacts">
+				<div class="layout">
+					<div class="footer_logo">
+						<a href="#">
+							<img src="img/footer_logo.png" alt="footer logo trip & mind">
+						</a>
+					</div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#/">Политика <br>конфиденциальности</a>
+							</li>
+							<li>
+								<a href="#/">Соглашение на обработку <br>персональных данных</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="footer_socials">
+						<a href="#/"><img src="img/icon_grey-yt.png" alt="grey icon youtube"></a>
+						<a href="#/"><img src="img/icon_grey-fb.png" alt="grey icon facebook"></a>
+						<a href="#/"><img src="img/icon_grey-tw.png" alt="grey icon twitter"></a>
+						<a href="#/"><img src="img/icon_grey-vk.png" alt="grey icon vk"></a>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

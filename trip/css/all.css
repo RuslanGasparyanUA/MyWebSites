@@ -1,0 +1,2146 @@
+/***************************************************              GENERAL RESET STYLES             ***************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+* {box-sizing: border-box;}
+*:focus {outline: none;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+nav ul {list-style:none;}
+ol, ul {
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a {
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  text-decoration:none;
+  margin:0;
+}
+a:hover {text-decoration:none;}
+table {
+  border-spacing:0;
+  border-collapse:collapse;
+}
+img {
+	border-style:none;
+	max-width:100%;
+}
+form fieldset {
+	margin:0;
+	padding:0;
+	border:none;
+}
+input, textarea, select {
+	vertical-align:middle;
+	color:#000;
+	padding:0;
+}
+input, select {vertical-align:middle;}
+input::-webkit-input-placeholder{color:#000;}
+input:focus::-webkit-input-placeholder{color:#000;}
+/*
+@media (min-width: 1921px){}
+@media (width: 1920px){}
+@media (min-width: 1440px) and (max-width: 1919px) {}
+@media (min-width: 1360px) and (max-width: 1439px) {}
+@media (min-width: 1280px) and (max-width: 1359px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 375px) and (max-width: 767px) {}
+@media (min-width: 320px) and (max-width: 374px) {}
+*/
+/*
+@media (max-width: 1919px) {}
+@media (max-width: 1439px) {}
+@media (max-width: 1279px) {}
+@media (max-width: 767px) {}
+*/
+#wrapper {
+	display:block;
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.layout {
+  display: block;
+  position:relative;
+  overflow: hidden;
+  width:100%;
+	margin:0 auto 0 auto;
+}
+header,
+main,
+footer,
+section {
+  display: block;
+  position:relative;
+  overflow: hidden;
+  width: 100%;
+}
+#content {
+  display: block;
+  position:relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+/********************************************************************************/
+
+.back{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  border: 3px solid red;
+  z-index: 9999;
+  background-color: wheat;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.back a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header{
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: .3s;
+  overflow: visible;
+}
+header .layout{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: visible;
+}
+header .layout .logo h1{
+  /* display: none; */
+  text-indent: -9999px;
+}
+header .layout nav ul{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+header .layout nav ul li a{
+  color: #fff;
+  padding-bottom: 5px;
+}
+header .layout nav ul li a:hover, 
+header .layout nav ul li a:focus, 
+header .layout nav ul li a:active{
+  border-bottom: 1.5px solid #fff;
+}
+header .layout .burger_menu:active, 
+header .layout .burger_menu:focus, 
+header .layout .burger_menu:hover{
+  cursor: pointer;
+}
+header .layout .burger_menu.change{
+  opacity: 0;
+}
+header .layout .burger_menu span{
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto;
+  background-color: white;
+}
+header .layout .opened-menu{
+  position: absolute;
+  display: none;
+  width: 400px;
+  height: 500px;
+  background-color: transparent;
+  border: 3px dotted white;
+  right: 119px;
+  top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+}
+header .layout .opened-menu ul{
+  margin-top: 40px;
+}
+header .layout .opened-menu ul li{
+  width: 80%;
+  height: 50px;
+  background-color: transparent;
+  border: 2px dotted white;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .layout .opened-menu ul li p{
+  font-family: monospace;
+  font-style: oblique;
+  font-size: 20px;
+  
+}
+header .layout .opened-menu ul li:first-child{
+  margin-top: 0;
+}
+header .layout .opened-menu ul li:hover{
+  cursor: pointer;
+  background: #FAC232;
+  border: 3px solid black;
+  box-shadow: -5px 10px 40px #fff;
+}
+header .layout .opened-menu ul li:hover p{
+  color: #000;
+  font-weight: bold;
+}
+header .layout .opened-menu .close-button{
+  width: 20px;
+  height: 20px;
+  float: right;
+  position: relative;
+}
+header .layout .opened-menu .close-button:hover{
+  cursor: pointer;
+}
+header .layout .opened-menu .close-button:hover .line{
+  background-color: black;
+}
+header .layout .opened-menu .close-button .line{
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+header .layout .opened-menu .close-button .line:first-child{
+  transform: rotate(45deg);
+}
+header .layout .opened-menu .close-button .line:last-child{
+  transform: rotate(-45deg);
+}
+.button_return{
+  display: none;
+}
+.arrow_top{
+  display: block;
+  position: fixed;
+  bottom: 1.5%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10;
+  border-top: 5px solid #000;
+  text-align: center;
+  padding-top: 5px;
+}
+.arrow_top a{
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+/*IRELAND SECTION STYLES*/
+
+
+section.ireland{
+  height: 970px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Montserrat';
+  background: url(../img/main-background_img.png) no-repeat center;
+  background-size: cover;
+  padding-top: 140px;
+}
+section.ireland .layout{
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  display: flex;
+}
+section.ireland .layout .ireland_content{
+  margin-top: 60px;
+}
+
+
+section.ireland .layout .ireland_content h3.ireland_title{
+  width: 715px;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 93px;
+  margin-bottom: 55px;
+}
+section.ireland .layout .ireland_content p.ireland_paragraf{
+  width: 575px;
+  font-size: 25px;
+  line-height: 45px;
+  margin-bottom: 70px;
+}
+section.ireland .layout .ireland_content .ireland_buttons{
+  width: 550px;
+  display: flex;
+  margin-bottom: 100px;
+}
+section.ireland .layout .ireland_content .ireland_buttons button{
+  width: 290px;
+  height: 75px;
+  background: #FAC232;
+  border-radius: 38px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0px;
+  text-align: center;
+  color: #251404;
+  margin-right: 60px;
+}
+section.ireland .layout .ireland_content .ireland_buttons button:active, 
+section.ireland .layout .ireland_content .ireland_buttons button:focus, 
+section.ireland .layout .ireland_content .ireland_buttons button:hover{
+  opacity: .8;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case{
+  width: 200px;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a{
+  width: 100%;
+  display: flex;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a:hover, 
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a:focus, 
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a:active{
+  opacity: .8;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a:visited{
+  text-decoration: none;
+  border: none;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a img{
+  margin-right: 15px;
+}
+section.ireland .layout .ireland_content .ireland_buttons .ireland_case a p{
+  font-size: 16px;
+  line-height: 26px;
+  color: #A2A8B6;
+}
+section.ireland .layout .ireland_content .ireland_socials{
+  width: 210px;
+  height: 90px;
+}
+section.ireland .layout .ireland_content .ireland_socials .social_title{
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+section.ireland .layout .ireland_content .ireland_socials .social_icons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+section.ireland .layout .ireland_content .ireland_socials .social_icons a:focus, 
+section.ireland .layout .ireland_content .ireland_socials .social_icons a:hover, 
+section.ireland .layout .ireland_content .ireland_socials .social_icons a:active{
+  opacity: .8;
+  outline: none;
+}
+
+section.ireland .layout .cards{
+  width: 925px;
+}
+.cards ul{
+  width: 100%;
+  display: flex;
+  margin-top: 508px;
+}
+.cards ul li{
+  width: 285px;
+  height: 200px;
+  border-radius: 16px;
+  margin-right: 30px;
+  position: relative;
+}
+.cards ul li:last-child{
+  margin-right: 0;
+}
+section.ireland .layout .cards-mobile{
+  display: none;
+}
+section.ireland .layout .cards .card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section.ireland .layout .cards .card img.card_img:hover, 
+section.ireland .layout .cards .card img.card_img:active, 
+section.ireland .layout .cards .card img.card_img:focus{
+  opacity: .9;
+  cursor: pointer;
+}
+.card img.card_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.cards ul li .card h4{
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 2;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+}
+.cards ul li .card p{
+  position: absolute;
+  left: 25px;
+  bottom: 35px;
+  z-index: 2;
+  font-size: 18px;
+  line-height: 25px;
+}
+.cards ul li .card img.card_arrow{
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+  z-index: 2;
+}
+.cards ul li .card img.arrow_left{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: -28px;
+}
+.cards ul li .card img.arrow_right{
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -28px;
+}
+
+
+
+section.ireland .layout .cards-mobile{
+  width: 925px;
+  position: relative;
+}
+.cards-mobile ul{
+  width: 100%;
+  display: flex;
+  margin-top: 508px;
+}
+.cards-mobile ul li{
+  width: 285px;
+  height: 200px;
+  border-radius: 16px;
+  margin-right: 30px;
+  position: relative;
+}
+.cards-mobile ul li:last-child{
+  margin-right: 0;
+}
+section.ireland .layout .cards-mobile .card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section.ireland .layout .cards-mobile .card img.card_img:hover, 
+section.ireland .layout .cards-mobile .card img.card_img:active, 
+section.ireland .layout .cards-mobile .card img.card_img:focus{
+  opacity: .9;
+  cursor: pointer;
+}
+.card img.card_img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.cards-mobile ul li .card h4{
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  z-index: 2;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+}
+.cards-mobile ul li .card p{
+  position: absolute;
+  left: 25px;
+  bottom: 35px;
+  z-index: 2;
+  font-size: 18px;
+  line-height: 25px;
+}
+.cards-mobile ul li .card img.card_arrow{
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+  z-index: 2;
+}
+.cards-mobile img.arrow_left{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 2;
+}
+.cards-mobile img.arrow_right{
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+}
+
+/*ALL TOURS STYLES*/
+
+
+section.all_tours{
+  width: 100%;
+  height: 800px;
+}
+section.all_tours .layout .tour_info{
+  width: 1375px;
+  height: 475px;
+  display: flex;
+  margin: 160px auto;
+}
+.tour_info .tour_card{
+  width: 830px;
+  height: 100%;
+  position: relative;
+  margin-right: 100px;
+  border-radius: 16px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+}
+.tour_info .tour_card:hover, 
+.tour_info .tour_card:active, 
+.tour_info .tour_card:focus{
+  cursor: pointer;
+  box-shadow: -2px -2px 30px rgba(61, 99, 138, 0.384);
+  opacity: .95;
+}
+.tour_card img.tour_card-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 16px;
+}
+.tour_card h4.data{
+  position: absolute;
+  left: 50px;
+  top: 40px;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  z-index: 2;
+}
+.tour_card p.month{
+  position: absolute;
+  top: 65px;
+  left: 50px;
+  font-size: 16px;
+  line-height: 28px;
+  z-index: 2;
+}
+.tour_card p.place{
+  width: 200px;
+  position: absolute;
+  left: 60px;
+  bottom: 45px;
+  font-size: 20px;
+  line-height: 28px;
+  z-index: 2;
+}
+.tour_card img.tour_arrow{
+  position: absolute;
+  right: 60px;
+  bottom: 70px;
+  z-index: 2;
+}
+
+.tour_info .tour_vectors{
+  height: 100%;
+  color: #000;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+}
+.tour_vectors h3.tour_title{
+  margin-top: 40px;
+  width: 455px;
+  margin-bottom: 35px;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 55px;
+}
+.tour_vectors p.tour_paragraf{
+  width: 415px;
+  font-size: 18px;
+  line-height: 33px;
+  margin-bottom: 45px;
+}
+.tour_vectors button{
+  width: 270px;
+  height: 75px;
+  border: 2px solid #FAC232;
+  border-radius: 38px;
+  background-color: inherit;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0px;
+  text-align: center;
+  color: #FAC232;
+}
+.tour_vectors button:active, 
+.tour_vectors button:focus, 
+.tour_vectors button:hover{
+  cursor: pointer;
+  background: #fff0c5;
+}
+
+
+/*CONSULTATIONS STYLES*/
+
+
+.consultations{
+  background: url(../img/imgForm.png);
+}
+.consultations .layout .consult_container{
+  width: 720px;
+  height: 320px;
+  display: flex;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  margin: 90px 380px 120px 830px;
+}
+.consult_container .text_info{
+  width: 370px;
+  margin-right: 60px;
+}
+.consult_container .text_info h3{
+  width: 100%;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 55px;
+  margin-bottom: 30px;
+}
+.consult_container .text_info p{
+  width: 200px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 33px;
+}
+.consult_container .request_form{
+  width: 285px;
+}
+.request_form form fieldset input{
+  width: 287px;
+  height: 75px;
+  border: 3px solid #D0DCE3;
+  border-radius: 38px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0px;
+  letter-spacing: 0.06em;
+  color: #A6B0B9;
+  margin-bottom: 15px;
+  background: inherit;
+  padding-left: 30px;
+}
+.request_form form fieldset input:active, 
+.request_form form fieldset input:hover, 
+.request_form form fieldset input:focus{
+  opacity: .8;
+  cursor: pointer;
+}
+.request_form form fieldset input::placeholder{
+  color: #A6B0B9;
+}
+.request_form form fieldset input:last-of-type{
+  margin-bottom: 30px;
+}
+.request_form form fieldset button{
+  width: 287px;
+  height: 75px;
+  background: #FAC232;
+  border-radius: 38px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0px;
+  text-align: center;
+  color: #251404;
+  margin-bottom: 10px;
+}
+.request_form form fieldset button:active, 
+.request_form form fieldset button:focus, 
+.request_form form fieldset button:hover{
+  opacity: .8;
+}
+.request_form form fieldset p{
+  width: 250px;
+  margin-left: 20px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+}
+.orange_text{
+  color: #A37910;
+}
+.orange_text:active, 
+.orange_text:focus, 
+.orange_text:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+
+/*TESTIMONIALS STYLES*/
+
+
+section.testimonials{
+  width: 100%;
+  height: 800px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  color: #000000; 
+}
+section.testimonials .layout .test_info{
+  width: 1375px;
+  height: 475px;
+  display: flex;
+  margin: 160px auto;
+}
+.test_info .test_requests{
+  width: 505px;
+}
+.test_info .test_requests h3{
+  width: 100%;
+  margin-top: 40px;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 55px;
+  margin-bottom: 35px;
+  margin-right: 60px;
+}
+.test_info .test_requests p{
+  width: 465px;
+  font-size: 18px;
+  line-height: 33px;
+  margin-bottom: 45px;
+}
+.test_info .test_requests button{
+  width: 270px;
+  height: 75px;
+  border: 2px solid #FAC232;
+  border-radius: 38px;
+  background: inherit;
+  font-size: 20px;
+  line-height: 0px;
+  text-align: center;
+  color: #FAC232;
+}
+.test_info .test_requests button:active, 
+.test_info .test_requests button:focus, 
+.test_info .test_requests button:hover{
+  background: #fff0c5;
+  cursor: pointer;
+}
+
+.test_info .test_card{
+  width: 830px;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+}
+.test_info .test_card:active, 
+.test_info .test_card:focus, 
+.test_info .test_card:hover{
+  cursor: pointer;
+  box-shadow: 5px -5px 40px rgba(61, 99, 138, 0.384);
+  opacity: .95;
+}
+.test_info .test_card img.test_card-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 16px;
+}
+.test_info .test_card h4{
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  font-family: 'Playfair Display';
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  z-index: 2;
+}
+.test_info .test_card p.name{
+  position: absolute;
+  top: 75px;
+  left: 50px;
+  font-size: 16px;
+  line-height: 28px;
+  z-index: 2;
+}
+.test_info .test_card p.words{
+  width: 345px;
+  position: absolute;
+  left: 60px;
+  bottom: 45px;
+  font-size: 20px;
+  line-height: 28px;
+  z-index: 2;
+}
+.test_info .test_card img.test_arrow{
+  position: absolute;
+  right: 60px;
+  bottom: 70px;
+  z-index: 2;
+}
+
+
+/*FOOTER STYLES*/
+
+
+section.footer{
+  height: 220px;
+}
+section.footer .layout{
+  padding: 80px 6.25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.footer .layout nav ul{
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+}
+section.footer .layout nav ul li a{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  color: #76838D;
+}
+section.footer .layout nav ul li a:active, 
+section.footer .layout nav ul li a:hover, 
+section.footer .layout nav ul li a:focus{
+  cursor: pointer;
+  opacity: .8;
+}
+section.footer .layout .footer_socials{
+  width: 210px;
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+section.footer .layout .footer_socials a:active, 
+section.footer .layout .footer_socials a:hover, 
+section.footer .layout .footer_socials a:focus{
+  opacity: .8;
+  cursor: pointer;
+}
+
+
+/*MEDIA QUAERYS*/
+
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .layout {
+    width:100%;
+  }
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+  section.ireland .layout{
+    justify-content: space-between;
+  }
+  section.ireland .layout .cards{
+    width: 320px;
+  }
+  .cards ul{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cards ul li{
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .consultations .layout .consult_container{
+    margin: 90px auto 120px auto;
+  }
+  section.footer .layout{
+    padding: 80px 6.25%;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 0;
+  }
+  section.footer .layout nav{
+    margin-right: 0;
+  }
+}
+
+
+
+@media (min-width: 1360px) and (max-width: 1439px) {
+  .layout {
+    width:100%;
+  }
+
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+  section.ireland .layout{
+    justify-content: space-between;
+  }
+  section.ireland .layout .cards{
+    width: 320px;
+  }
+  .cards ul{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cards ul li{
+    border-radius: 16px;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+
+  section.all_tours{
+    padding: 0 1%;
+  }
+
+
+  .consultations .layout .consult_container{
+    margin: 90px auto 120px auto;
+  }
+
+
+  section.testimonials{
+    padding: 0 1%;
+  }
+
+
+  section.footer .layout{
+    padding: 80px 6.25%;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 0;
+  }
+  section.footer .layout nav{
+    margin-right: 0;
+  }
+}
+
+
+
+@media (min-width: 1280px) and (max-width: 1359px) {
+  .layout {
+    width:100%;
+  }
+
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+
+  section.ireland .layout{
+    justify-content: space-between;
+  }
+  section.ireland .layout .cards{
+    width: 320px;
+  }
+  .cards ul{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cards ul li{
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+
+  .consultations .layout .consult_container{
+    margin: 90px auto 120px auto;
+  }
+
+
+  section.footer .layout{
+    padding: 80px 6.25%;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 0;
+  }
+  section.footer .layout nav{
+    margin-right: 0;
+  }
+
+
+  section.all_tours{
+    padding: 0 1%;
+  }
+  .tour_info .tour_card{
+    height: 100%;
+    margin-right: 50px;
+  }
+  .tour_vectors h3.tour_title{
+    margin-top: 20px;
+    width: 385px;
+    margin-bottom: 25px;
+  }
+  .tour_vectors p.tour_paragraf{
+    width: 355px;
+    margin-bottom: 25px;
+  }
+
+
+  section.testimonials{
+    padding: 0 1%;
+  }
+  .test_info .test_requests{
+    width: 385px;
+    margin-right: 30px;
+  }
+  .test_info .test_requests h3{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-right: 60px;
+  }
+  .test_info .test_requests p{
+    width: 100%;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .layout {
+    width:100%;
+  }
+
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+
+  header .layout{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .header_active{
+    background: #28324D;
+    height: 100px;
+  }
+
+
+  section.ireland .layout{
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+  }
+  section.ireland .layout .ireland_content h3.ireland_title{
+    width: 650px;
+  }
+  section.ireland .layout .cards{
+    width: 320px;
+  }
+  .cards ul{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cards ul li{
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+
+  section.all_tours{
+    padding: 0 1%;
+  }
+  section.all_tours .layout .tour_info{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tour_info .tour_card{
+    height: 100%;
+    margin-right: 0;
+    width: 58%;
+  }
+  .tour_info .tour_vectors{
+    width: 38%;
+  }
+  .tour_vectors h3.tour_title{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .tour_vectors p.tour_paragraf{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+
+  
+
+  .consultations .layout .consult_container{
+    margin: 90px auto 120px auto;
+  }
+
+
+  section.testimonials{
+    padding: 0 1%;
+  }
+  section.testimonials .layout .test_info{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .test_info .test_requests{
+    width: 38%;
+    margin-right: 0;
+  }
+  .test_info .test_requests h3{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-right: 60px;
+  }
+  .test_info .test_requests p{
+    width: 100%;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+  .test_info .test_card{
+    width: 58%;
+    height: 100%;
+  }
+
+
+  section.footer .layout{
+    padding: 80px 2%;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 20px;
+  }
+  section.footer .layout nav{
+    margin-right: 20px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .layout {
+    width:100%;
+  }
+
+
+  header .layout{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .header_active{
+    background: #28324D;
+    height: 100px;
+  }
+  .mobile_menu{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    z-index: 5;
+    background: chocolate;
+  }
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+
+  section.ireland .layout{
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+  }
+  section.ireland .layout .ireland_content{
+    width: 58%;
+    margin-top: 0;
+  }
+  section.ireland .layout .ireland_content h3.ireland_title{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 53px;
+    line-height: 68px;
+  }
+  section.ireland .layout .ireland_content p.ireland_paragraf{
+    width: 90%;
+    margin-bottom: 40px;
+    line-height: 35px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons{
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons button{
+    margin-right: 0;
+  }
+  section.ireland .layout .cards{
+    width: 38%;
+  }
+  .cards ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .cards ul li{
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .cards ul li:first-of-type{
+    margin-top: 0;
+  }
+
+
+  section.all_tours{
+    padding: 0 0 0 0;
+  }
+  section.all_tours .layout .tour_info{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .tour_info .tour_card{
+    height: 100%;
+    margin-right: 0;
+    width: 58%;
+  }
+  .tour_card h4.data{
+    left: 20px;
+    top: 20px;
+  }
+  .tour_card p.month{
+    top: 45px;
+    left: 25px;
+  }
+  .tour_card p.place{
+    left: 30px;
+    bottom: 35px;
+  }
+  .tour_card img.tour_arrow{
+    right: 40px;
+    bottom: 50px;
+  }
+  .tour_info .tour_vectors{
+    width: 38%;
+  }
+  .tour_vectors h3.tour_title{
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 42px;
+    line-height: 45px;
+  }
+  .tour_vectors p.tour_paragraf{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+
+  
+
+  .consultations .layout .consult_container{
+    margin: 90px auto 120px auto;
+  }
+
+
+  section.testimonials{
+    padding: 0;
+  }
+  section.testimonials .layout .test_info{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .test_info .test_requests{
+    width: 38%;
+    margin-right: 0;
+  }
+  .test_info .test_requests h3{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 25px;
+    margin-right: 0;
+    font-size: 42px;
+    line-height: 45px;
+  }
+  .test_info .test_requests p{
+    width: 100%;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+  .test_info .test_card{
+    width: 58%;
+    height: 100%;
+  }
+  .test_info .test_card h4{
+    top: 20px;
+    left: 25px;
+  }
+  .test_info .test_card p.name{
+    top: 50px;
+    left: 25px;
+  }
+  .test_info .test_card p.words{
+    width: 245px;
+    left: 25px;
+    bottom: 45px;
+  }
+  .test_info .test_card img.test_arrow{
+    right: 40px;
+    bottom: 80px;
+  }
+
+
+  section.footer .layout{
+    padding: 80px 2%;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 15px;
+  }
+  section.footer .layout nav{
+    margin-right: 15px;
+  }
+  section.footer .layout nav ul{
+    width: 400px;
+  }
+  section.footer .layout .footer_socials{
+    width: 150px;
+  }
+}
+
+
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .layout {
+    width:100%;
+  }
+
+
+  header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  header .layout{
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .header_active{
+    background: #28324D;
+    height: 80px;
+  }
+  header.active{
+    width: 100%;
+    height: 253px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #28324D;
+  }
+  header.active .layout{
+    width: 100%;
+    height: 100%;
+  }
+  header.active .layout nav{
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 65px;
+    z-index: 50;
+    padding-right: 20px;
+    text-align: center;
+  }
+  header .layout nav{
+    display: none;
+  }
+  header.active .layout nav ul{
+    width: 100%;
+    display: block;
+  }
+  header.active .layout nav ul li{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  header.active .layout nav ul li:first-of-type{
+    margin-top: 20px;
+  }
+  header.active .layout nav ul li a{
+    color: #fff;
+    padding-bottom: 5px;
+  }
+  header .layout .burger_menu span{
+    transition: .4s;
+  }
+  .change .line1 {
+    -webkit-transform: rotate(-45deg) translate(-20px, 18px);
+    transform: rotate(-45deg) translate(-20px, 18px);
+  }
+  .change .line2 {opacity: 0;}
+  .change .line3 {
+    -webkit-transform: rotate(45deg) translate(2px, 3px);
+    transform: rotate(45deg) translate(2px, 3px);
+  }
+  .arrow_top{
+    display: none;
+  }
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+
+  section.ireland{
+    height: 890px;
+    padding-top: 80px;
+  }
+  section.ireland .layout{
+    padding-top: 0 ;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: block;
+    justify-content: unset;
+  }
+  section.ireland .layout .ireland_content{
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+  section.ireland .layout .ireland_content h3.ireland_title{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 53px;
+  }
+  section.ireland .layout .ireland_content p.ireland_paragraf{
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons button{
+    width: 290px;
+    height: 50px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons .ireland_case{
+    width: 100%;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons .ireland_case a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section.ireland .layout .ireland_content .ireland_socials{
+    margin: 0 auto 10px auto;
+  }
+  section.ireland .layout .cards{
+    display: none;
+  }
+  section.ireland .layout .cards-mobile{
+    width: 100%;
+    display: block;
+  }
+  .cards-mobile ul{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    margin-top: 0;
+    margin: 0 auto;
+  }
+  .cards-mobile ul li{
+    margin: 0 auto;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .cards-mobile ul li:last-child{
+    margin-right: 0;
+  }
+  .cards-mobile ul li:first-of-type{
+    margin-top: 0;
+  }
+  .cards-mobile ul li .card img.arrow_left, 
+  .cards-mobile ul li .card img.arrow_right{
+    display: block;
+  }
+
+
+  section.all_tours{
+    padding: 0 0 0 0;
+    height: 920px;
+    margin: 50px 0;
+  }
+  section.all_tours .layout .tour_info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 30px auto;
+  }
+  .tour_info .tour_vectors{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .tour_vectors h3.tour_title{
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 36px;
+    line-height: 55px;
+  }
+  .tour_vectors p.tour_paragraf{
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 60px;
+  }
+  .tour_info .tour_card{
+    height: 400px;
+    margin-right: 0;
+    width: 100%;
+  }
+  .tour_card h4.data{
+    left: 20px;
+    top: 20px;
+  }
+  .tour_card p.month{
+    top: 45px;
+    left: 25px;
+  }
+  .tour_card p.place{
+    left: 30px;
+    bottom: 35px;
+  }
+  .tour_card img.tour_arrow{
+    right: 40px;
+    bottom: 50px;
+  }
+
+
+  .consultations{
+    background: url(../img/imgForm.png) -450px 0 no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+  }
+  .consultations .layout .consult_container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+  .consult_container .text_info{
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .consult_container .text_info h3{
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .consult_container .text_info p{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .consult_container .request_form{
+    width: 100%;
+  }
+  .request_form form fieldset p{
+    margin: 0 auto;
+  }
+
+
+  section.testimonials{
+    padding: 0 0 0 0;
+    height: 900px;
+    margin: 50px 0 0 0;
+  }
+  section.testimonials .layout{
+    height: 100%;
+    padding-bottom: 15px;
+  }
+  section.testimonials .layout .test_info{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+  .test_info .test_requests{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .test_info .test_requests h3{
+    width: 100%;
+    margin: 0 0 20px 0;
+    font-size: 42px;
+    line-height: 45px;
+  }
+  .test_info .test_requests p{
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .test_info .test_card{
+    width: 100%;
+    height: 400px;
+  }
+  .test_info .test_card h4{
+    top: 20px;
+    left: 20px;
+  }
+  .test_info .test_card p.name{
+    top: 55px;
+    left: 20px;
+  }
+  .test_info .test_card p.words{
+    width: 180px;
+    left: 20px;
+    bottom: 60px;
+  }
+  .test_info .test_card img.test_arrow{
+    right: 30px;
+    bottom: 100px;
+  }
+
+
+  section.footer{
+    height: 350px;
+  }
+  section.footer .layout{
+    padding: 20px 2%;
+    flex-direction: column-reverse;
+    justify-content: unset;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 0;
+  }
+  section.footer .layout nav{
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  section.footer .layout nav ul{
+    width: 100%;
+    flex-direction: column;
+    justify-content: unset;
+  }
+  section.footer .layout nav ul li{
+    margin-bottom: 20px;
+  }
+  section.footer .layout .footer_socials{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .layout {
+    width:100%;
+  }
+
+
+  header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  header .layout{
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .header_active{
+    background: #28324D;
+    height: 80px;
+  }
+  header.active{
+    width: 100%;
+    height: 253px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #28324D;
+  }
+  header.active .layout{
+    width: 100%;
+    height: 100%;
+  }
+  header.active .layout nav{
+    display: block;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 65px;
+    z-index: 50;
+    padding-right: 20px;
+    text-align: center;
+  }
+  header .layout nav{
+    display: none;
+  }
+  header.active .layout nav ul{
+    width: 100%;
+    display: block;
+  }
+  header.active .layout nav ul li{
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  header.active .layout nav ul li:first-of-type{
+    margin-top: 20px;
+  }
+  header.active .layout nav ul li a{
+    color: #fff;
+    padding-bottom: 5px;
+  }
+  header .layout .burger_menu span{
+    transition: .4s;
+  }
+  .change .line1 {
+    -webkit-transform: rotate(-45deg) translate(-20px, 18px);
+    transform: rotate(-45deg) translate(-20px, 18px);
+  }
+  .change .line2 {opacity: 0;}
+  .change .line3 {
+    -webkit-transform: rotate(45deg) translate(2px, 3px);
+    transform: rotate(45deg) translate(2px, 3px);
+  }
+  .arrow_top{
+    display: none;
+  }
+  header .layout .burger_menu.change{
+    opacity: 1;
+  }
+  header .layout .opened-menu{
+    opacity: 0;
+  }
+
+  
+
+  section.ireland{
+    height: 890px;
+    padding-top: 80px;
+  }
+  section.ireland .layout{
+    padding-top: 0 ;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: block;
+    justify-content: unset;
+  }
+  section.ireland .layout .ireland_content{
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+  section.ireland .layout .ireland_content h3.ireland_title{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 53px;
+  }
+  section.ireland .layout .ireland_content p.ireland_paragraf{
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 25px;
+    line-height: 45px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons button{
+    width: 290px;
+    height: 50px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons .ireland_case{
+    width: 100%;
+  }
+  section.ireland .layout .ireland_content .ireland_buttons .ireland_case a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section.ireland .layout .ireland_content .ireland_socials{
+    margin: 0 auto 10px auto;
+  }
+  section.ireland .layout .cards{
+    display: none;
+  }
+  section.ireland .layout .cards-mobile{
+    width: 100%;
+    display: flex;
+  }
+  .cards-mobile ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: center;
+  }
+  .cards-mobile ul li{
+    margin: 0 auto;
+  }
+  .cards-mobile ul li.slide{
+    margin: 0 auto;
+  }
+  .cards-mobile ul li:first-of-type{
+    margin-top: 0;
+  }
+  .cards-mobile ul li .card img.arrow_left{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+  }
+  .cards-mobile ul li .card img.arrow_right{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -19px;
+  }
+
+
+  section.all_tours{
+    padding: 0 0 0 0;
+    height: 920px;
+    margin: 50px 0;
+  }
+  section.all_tours .layout .tour_info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 30px auto;
+  }
+  .tour_info .tour_vectors{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .tour_vectors h3.tour_title{
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 55px;
+  }
+  .tour_vectors p.tour_paragraf{
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+  .tour_info .tour_card{
+    height: 400px;
+    margin-right: 0;
+    width: 100%;
+  }
+  .tour_card h4.data{
+    left: 20px;
+    top: 20px;
+  }
+  .tour_card p.month{
+    top: 45px;
+    left: 25px;
+  }
+  .tour_card p.place{
+    left: 30px;
+    bottom: 35px;
+  }
+  .tour_card img.tour_arrow{
+    right: 40px;
+    bottom: 50px;
+  }
+
+
+  .consultations{
+    background: url(../img/imgForm.png) -450px 0 no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+  }
+  .consultations .layout .consult_container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+  .consult_container .text_info{
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .consult_container .text_info h3{
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .consult_container .text_info p{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .consult_container .request_form{
+    width: 100%;
+  }
+  .request_form form fieldset p{
+    margin: 0 auto;
+  }
+
+
+  section.testimonials{
+    padding: 0 0 0 0;
+    height: 900px;
+    margin: 50px 0 0 0;
+  }
+  section.testimonials .layout{
+    height: 100%;
+    padding-bottom: 15px;
+  }
+  section.testimonials .layout .test_info{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    text-align: center;
+  }
+  .test_info .test_requests{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .test_info .test_requests h3{
+    width: 100%;
+    margin: 0 0 20px 0;
+    font-size: 42px;
+    line-height: 45px;
+  }
+  .test_info .test_requests p{
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .test_info .test_card{
+    width: 100%;
+    height: 400px;
+  }
+  .test_info .test_card h4{
+    top: 20px;
+    left: 20px;
+  }
+  .test_info .test_card p.name{
+    top: 55px;
+    left: 20px;
+  }
+  .test_info .test_card p.words{
+    width: 180px;
+    left: 20px;
+    bottom: 60px;
+  }
+  .test_info .test_card img.test_arrow{
+    right: 30px;
+    bottom: 100px;
+  }
+
+
+  section.footer{
+    height: 350px;
+  }
+  section.footer .layout{
+    padding: 20px 2%;
+    flex-direction: column-reverse;
+    justify-content: unset;
+  }
+  section.footer .layout .footer_logo{
+    margin-right: 0;
+  }
+  section.footer .layout nav{
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  section.footer .layout nav ul{
+    width: 100%;
+    flex-direction: column;
+    justify-content: unset;
+  }
+  section.footer .layout nav ul li{
+    margin-bottom: 20px;
+  }
+  section.footer .layout .footer_socials{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
