@@ -1,0 +1,72 @@
+section.benefits{
+	@include box;
+	height: 700px;
+	.layout{
+		height: 100%;
+		padding-top: 70px;
+		@media (min-width: 375px) and (max-width: 767px) {
+			padding-top: 30px;
+		}
+		.info{
+			text-align: center;
+			.head{
+				margin: 0 auto;
+				margin-bottom: 50px;
+				@media (min-width: 375px) and (max-width: 767px) {
+					margin-bottom: 20px;
+				}
+				h3{
+					@include title;
+				}
+			}
+			.items{
+				width: 1200px;
+				height: 460px;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-template-rows: auto auto auto;
+				text-align: left;
+				float: right;
+				@media (min-width: 375px) and (max-width: 767px) {
+					width: 100%;
+					height: 600px;
+					display: block;
+					float: none;
+					margin-left: 20px;
+				}
+				.item{
+					display: flex;
+					@media (min-width: 375px) and (max-width: 767px) {
+						margin-bottom: 45px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+					.item-img{
+						width: 80px;
+						height: 80px;
+						margin-right: 25px;
+						@media (min-width: 375px) and (max-width: 767px) {
+							width: 50px;
+							height: 50px;
+							margin-right: 10px;
+						}
+						img{
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.item-desc{
+						h4{
+							@include benefitsH4;
+						}
+						p{
+							@include benefitsDesc;
+						}
+					}
+				}
+			}
+		}
+	}
+}

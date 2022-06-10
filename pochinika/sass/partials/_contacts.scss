@@ -1,0 +1,122 @@
+	section.contacts {
+	@include box;
+	height: 700px;
+	@media (min-width: 375px) and (max-width: 767px) {
+		height: 360px;
+	}
+
+	.layout{
+		height: 100%;
+		background: $lightBlue;
+		padding-top: 70px;
+		padding-right: 130px;
+		padding-left: 130px;
+		@media (min-width: 375px) and (max-width: 767px) {
+			padding: 30px;
+		}
+		&::before{
+			content: '';
+			width: 230px;
+			height: 230px;
+			border-radius: 50%;
+			display: block;
+			background: rgba(255, 255, 255, 0.3);
+			position: absolute;
+			left: 210px;
+			top: -120px;
+			@media (min-width: 375px) and (max-width: 767px) {
+				display: none;
+			}
+		}
+		&::after{
+			content: '';
+			width: 360px;
+			height: 360px;
+			border-radius: 50%;
+			display: block;
+			background: rgba(255, 255, 255, 0.3);
+			position: absolute;
+			right: -95px;
+			bottom: -80px;
+			z-index: 1;
+			@media (min-width: 375px) and (max-width: 767px) {
+				display: none;
+			}
+		}
+		.head{
+			margin-bottom: 60px;
+			text-align: center;
+			@media (min-width: 375px) and (max-width: 767px) {
+				margin-bottom: 5px;
+			}
+			h3{
+				@include title;
+			}
+		}
+		.info{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			@media (min-width: 375px) and (max-width: 767px) {
+				flex-wrap: wrap;
+			}
+			.text{
+				.item{
+					margin-bottom: 50px;
+					@media (min-width: 375px) and (max-width: 767px) {
+						margin-bottom: 10px;
+					}
+					&:last-child{
+						margin-bottom: 0;
+					}
+					.item-head{
+						margin-bottom: 25px;
+						@media (min-width: 375px) and (max-width: 767px) {
+							margin-bottom: 10px;
+						}
+						h4{
+							@include benefitsH4;
+							font-family: 'Roboto';
+						}
+					}
+					.general{
+						display: flex;
+						align-items: center;
+						.item-img{
+							margin-right: 25px;
+							@media (min-width: 375px) and (max-width: 767px) {
+								margin-right: 10px;
+								width: 35px;
+								height: 35px;
+							}
+							img{
+								width: 100%;
+								height: 100%;
+							}
+						}
+						.item-desc{
+							p{
+								@include contentText;
+								font-style: 10px;
+							}
+						}
+					}
+				}
+			}
+			.map{
+				width: 540px;
+				height: 430px;
+				z-index: 2;
+				@media (min-width: 375px) and (max-width: 767px) {
+					width: 180px;
+					height: 140px;	
+					display: none;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

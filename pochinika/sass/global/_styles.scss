@@ -1,0 +1,16 @@
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section{
+	@include box;
+}
+.layout {
+	@include box;
+	width:1366px;
+	margin:0 auto;
+	@media (min-width: 375px) and (max-width: 767px) {
+		width: 375px;
+	}
+}

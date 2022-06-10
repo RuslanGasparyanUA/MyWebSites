@@ -1,0 +1,77 @@
+section.pochinika {
+	@include box;
+	height: 770px;
+	@media (min-width: 375px) and (max-width: 767px) {
+		height: 670px;
+	}
+	.layout{
+		height: 100%;
+		padding-top: 220px;
+		background: url(../img/pochinika-background.png);
+		@media (min-width: 375px) and (max-width: 767px) {
+			padding-top: 75px;
+			background-position: -450px 0px;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.info{
+			float: right;
+			width: 700px;
+			text-align: center;
+			@media (min-width: 375px) and (max-width: 767px) {
+				padding-top: 105px;
+				width: 95%;
+			}
+			.head{
+				margin-bottom: 25px;
+				text-align: center;
+				@media (min-width: 375px) and (max-width: 767px) {
+					margin-bottom: 50px;
+				}
+				h2{
+					font-family: 'Open Sans';
+					font-style: normal;
+					font-weight: normal;
+					font-size: 45px;
+					line-height: 136.97%;
+					color:  $darkBlue;
+					@media (min-width: 375px) and (max-width: 767px) {
+						font-size: 30px;
+					}
+					.pochinika-title{
+						font-family: 'Secular One';
+						@media (min-width: 375px) and (max-width: 767px) {
+							font-size: 30px;
+						}
+					}
+				}
+			}
+			.button{
+				width: 370px;
+				height: 65px;
+				background: $lightBlue;
+				text-align: center;
+				padding: 17px 0;
+				border-radius: 50px;
+				margin: 0 auto;
+				@media (min-width: 375px) and (max-width: 767px) {
+					width: 175px;
+					height: 35px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&:hover{
+					cursor: pointer;
+				}
+				p{
+					@include buttonText;
+					line-height: 100%;
+					@media (min-width: 375px) and (max-width: 767px) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
